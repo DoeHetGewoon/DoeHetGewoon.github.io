@@ -1,0 +1,32 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+.main {
+	background-color: #23272a;
+}
+.header {
+	background-color: #2c2f33;
+	position: fixed;
+	overflow: hidden;
+	left: 0;
+	top: 0;
+	right: 0;
+}
+.header img {
+	padding: 10px;
+	width: 75px;
+}
+.header a {
+	float: right;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 15px 15px;
+	text-decoration: none;
+	font-size: 20px;
+}
+.header h1 {
+	text-align: left;
+	color: #f2f2f2;
+	text-decoration: none;
+	font-size: 20px;
+	font-family: "Kumbh Sans";
+}

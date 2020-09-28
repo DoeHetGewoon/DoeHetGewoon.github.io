@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css?family=Kumbh+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap");
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #9695ed;
+	background: -webkit-linear-gradient(to right, #615fe9, #9695ed);
+	background: linear-gradient(to right, #6d74df, #b77ee6);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	font-family: "Kumbh Sans";
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+.mobile-container {
+	background-color: #fff;
+	box-shadow: 0 0 10px 2px #3333331a;
+	border-radius: 3px;
+	overflow: hidden;
+	width: 400px;
+}
+
+.notes-container {
+	align-items: center;
+	text-align: center;
+	justify-content: center;
+}
+
+.notes-container p {
+	font-size: 13px;
+	margin: 5px;
+	color: rgba(0, 0, 0, 0.6);
+}
+
+.notes-container input {
+	border-radius: 6px;
+	border-width: 3px;
+	font-size: 25px;
+}
+
+.notes {
+	margin: 0.8rem;
+	text-align: left;
+	font-size: 20px;
+	padding-top: 0;
+}
+
+.note {
+	cursor: pointer;
+	margin-top: 7px;
+}
+
+.note.done {
+	text-decoration: line-through;
+	opacity: 0.4;
+}

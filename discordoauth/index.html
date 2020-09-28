@@ -1,0 +1,42 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="cdn/favicon.png" />
+		<link rel="stylesheet" type="text/css" href="stylesheet.css" />
+		<script src="script.js"></script>
+		<title>DoeHetGewoon</title>
+	</head>
+
+	<body>
+		<h1>Discord OAuth2 Test Pagina</h1>
+		<div id="info">Please login with discord.</div>
+		<a id="login" style="display: none" href="https://discord.com/api/oauth2/authorize?client_id=754353982905778236&redirect_uri=http%3A%2F%2Flocalhost%3A5500%2Fdiscordoauth%2F&response_type=code&scope=identify">Identify with Discord</a>
+	</body>
+
+	<script>
+		window.onload = () => {
+			const fragment = new URLSearchParams(window.location.hash.slice(1));
+			console.log(fragment);
+
+			if (fragment.has("access_token")) {
+				const accessToken = fragment.get("access_token");
+				const tokenType = fragment.get("token_type");
+
+				fetch("https://discordapp.com/api/users/@me", {
+					headers: {
+						authorization: `${tokenType} ${accessToken}`,
+					},
+				})
+					.then((res) => res.json())
+					.then((response) => {
+						const {username, discriminator} = response;
+						document.getElementById("info").innerText += ` ${username}#${discriminator}`;
+					})
+					.catch(console.error);
+			} else {
+				document.getElementById("login").style.display = "block";
+			}
+		};
+	</script>
+</html>
