@@ -15,7 +15,7 @@ buttonEl.addEventListener("click", async (e) => {
 });
 
 async function getJoke() {
-	const jokeRaw = await fetch("https://api.apekool.nl/services/jokes/getjoke.php/");
+	const jokeRaw = await fetch("http://api.apekool.nl/services/jokes/getjoke.php/");
 	const joke = jokeRaw.json();
 	return joke;
 }
