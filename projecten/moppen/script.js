@@ -9,7 +9,7 @@ buttonEl.addEventListener("click", async (e) => {
 
 	jokeEl = document.createElement("p");
 	jokeEl.classList.add("joke");
-	jokeEl.innerText = joke.joke;
+	jokeEl.innerText = joke.joke.joke;
 
 	jokesEl.appendChild(jokeEl);
 });
